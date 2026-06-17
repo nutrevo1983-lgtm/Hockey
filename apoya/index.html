@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apoya al Club · Huechuraba Hockey Club</title>
+<meta name="description" content="Apoya al Huechuraba Hockey Club con tu transferencia. ¡Juntos somos más fuertes!">
+<meta property="og:title" content="Apoya al Club · Huechuraba Hockey Club">
+<meta property="og:description" content="Realiza tu transferencia y ayúdanos a seguir creciendo.">
+<meta property="og:image" content="https://nutrevo1983-lgtm.github.io/Hockey/invitacionhockey.jpg">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --verde:#0a7d2c; --verde-osc:#075a20; --verde-claro:#1aa33f;
+    --amar:#f4c20d; --tinta:#0b2a13; --line:#e3ece5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Inter',system-ui,sans-serif; color:var(--tinta);
+    background:radial-gradient(circle at 50% 0%, #0e9e38 0%, #0a7d2c 45%, #064a1a 100%);
+    min-height:100vh; padding:24px 16px 48px;
+  }
+  .wrap{max-width:520px; margin:0 auto}
+  .flyer{
+    width:100%; border-radius:20px; display:block;
+    box-shadow:0 18px 50px rgba(0,0,0,.35); border:3px solid rgba(255,255,255,.15);
+  }
+  .card{
+    background:#fff; border-radius:20px; margin-top:22px; overflow:hidden;
+    box-shadow:0 14px 40px rgba(0,0,0,.28);
+  }
+  .card-head{
+    background:var(--verde-osc); color:#fff; text-align:center;
+    font-family:'Montserrat',sans-serif; font-weight:800; letter-spacing:.02em;
+    padding:16px; font-size:18px;
+  }
+  .rows{padding:8px 18px 18px}
+  .row{
+    display:flex; align-items:center; gap:12px;
+    padding:13px 4px; border-bottom:1px solid var(--line);
+  }
+  .row:last-child{border-bottom:none}
+  .row .info{flex:1; min-width:0}
+  .row .k{
+    font-family:'Montserrat',sans-serif; font-weight:700; font-size:11px;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--verde);
+  }
+  .row .v{font-size:17px; font-weight:700; color:var(--tinta); word-break:break-word; margin-top:2px}
+  .copy{
+    flex-shrink:0; background:var(--verde); color:#fff; border:none; cursor:pointer;
+    font-family:'Inter',sans-serif; font-weight:700; font-size:13px;
+    padding:9px 13px; border-radius:10px; min-height:40px; transition:.15s;
+  }
+  .copy:active{transform:scale(.95)}
+  .copy.done{background:var(--amar); color:var(--tinta)}
+  .cta{
+    display:block; text-align:center; text-decoration:none;
+    background:var(--amar); color:var(--tinta);
+    font-family:'Montserrat',sans-serif; font-weight:800; font-size:16px;
+    padding:16px; border-radius:14px; margin-top:18px;
+    box-shadow:0 10px 26px rgba(244,194,13,.35);
+  }
+  .foot{
+    text-align:center; color:rgba(255,255,255,.92); margin-top:22px;
+    font-size:13px; line-height:1.6;
+  }
+  .foot b{color:#fff}
+  .toast{
+    position:fixed; left:50%; bottom:24px; transform:translateX(-50%) translateY(80px);
+    background:var(--tinta); color:#fff; padding:12px 22px; border-radius:12px;
+    font-weight:700; font-size:14px; opacity:0; transition:.3s; z-index:50;
+    box-shadow:0 8px 24px rgba(0,0,0,.3);
+  }
+  .toast.show{transform:translateX(-50%) translateY(0); opacity:1}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <img class="flyer" src="../invitacionhockey.jpg" alt="Apoya al Huechuraba Hockey Club - datos para transferencia">
+
+    <div class="card">
+      <div class="card-head">DATOS PARA TRANSFERENCIA</div>
+      <div class="rows">
+        <div class="row">
+          <div class="info"><div class="k">Nombre</div><div class="v">Christian Belmar Araya</div></div>
+          <button class="copy" data-copy="Christian Belmar Araya">Copiar</button>
+        </div>
+        <div class="row">
+          <div class="info"><div class="k">RUT</div><div class="v">14.573.764-8</div></div>
+          <button class="copy" data-copy="14.573.764-8">Copiar</button>
+        </div>
+        <div class="row">
+          <div class="info"><div class="k">Cuenta</div><div class="v">Chequera Electrónica</div></div>
+        </div>
+        <div class="row">
+          <div class="info"><div class="k">N° de cuenta</div><div class="v">621 90 743700</div></div>
+          <button class="copy" data-copy="62190743700">Copiar</button>
+        </div>
+        <div class="row">
+          <div class="info"><div class="k">Banco</div><div class="v">Banco Santander</div></div>
+        </div>
+        <div class="row">
+          <div class="info"><div class="k">Mail</div><div class="v">belmar.christian@gmail.com</div></div>
+          <button class="copy" data-copy="belmar.christian@gmail.com">Copiar</button>
+        </div>
+      </div>
+    </div>
+
+    <a class="cta" id="share" href="#">📲 Compartir esta página</a>
+
+    <div class="foot">
+      <b>¡Juntos somos más fuertes!</b><br>
+      Cada aporte impulsa nuestro juego.<br>
+      Venta para apoyar las actividades del club.
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+<script>
+  function toast(msg){
+    var t=document.getElementById('toast');
+    t.textContent=msg; t.classList.add('show');
+    clearTimeout(t._t); t._t=setTimeout(function(){t.classList.remove('show')},1900);
+  }
+  function copyText(text){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function(res,rej){
+      var ta=document.createElement('textarea'); ta.value=text;
+      ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta);
+      ta.focus(); ta.select();
+      try{ document.execCommand('copy'); res(); }catch(e){ rej(e); }
+      document.body.removeChild(ta);
+    });
+  }
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click', function(){
+      copyText(b.getAttribute('data-copy')).then(function(){
+        b.textContent='✓ Copiado'; b.classList.add('done');
+        toast('Copiado al portapapeles');
+        setTimeout(function(){ b.textContent='Copiar'; b.classList.remove('done'); }, 1600);
+      }).catch(function(){ toast('No se pudo copiar'); });
+    });
+  });
+  document.getElementById('share').addEventListener('click', function(e){
+    e.preventDefault();
+    var url=location.href;
+    var data={title:'Apoya al Huechuraba Hockey Club', text:'Apoya al club con tu transferencia. ¡Juntos somos más fuertes!', url:url};
+    if(navigator.share){ navigator.share(data).catch(function(){}); }
+    else{ copyText(url).then(function(){ toast('Enlace copiado'); }); }
+  });
+</script>
+</body>
+</html>
